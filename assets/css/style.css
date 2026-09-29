@@ -173,6 +173,7 @@ h1 {
   position: relative;
   z-index: 1;
   width: clamp(230px, 23vw, 280px);
+  aspect-ratio: 1 / 1;
   margin-left: auto;
 }
 .profile-frame::before {
@@ -185,7 +186,7 @@ h1 {
 .profile-photo {
   position: relative;
   width: 100%;
-  aspect-ratio: 1;
+  height: 100%;
   object-fit: cover;
   object-position: 50% 28%;
   border-radius: 50%;
