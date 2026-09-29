@@ -179,7 +179,7 @@ h1 {
 .profile-frame::before {
   content: "";
   position: absolute;
-  inset: 10px -10px -10px 10px;
+  inset: -6px;
   border: 1px solid var(--cyan);
   border-radius: 50%;
 }
