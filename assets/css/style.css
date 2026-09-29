@@ -109,7 +109,7 @@ main { overflow: hidden; }
   min-height: 690px;
   margin: auto;
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr);
+  grid-template-columns: minmax(0, 1.35fr) minmax(240px, .65fr);
   align-items: center;
   gap: clamp(48px, 7vw, 100px);
   padding: 96px 0 84px;
@@ -172,38 +172,28 @@ h1 {
 .profile-frame {
   position: relative;
   z-index: 1;
-  max-width: 390px;
+  width: clamp(230px, 23vw, 280px);
   margin-left: auto;
 }
 .profile-frame::before {
   content: "";
   position: absolute;
-  inset: 18px -18px -18px 18px;
+  inset: 10px -10px -10px 10px;
   border: 1px solid var(--cyan);
-  border-radius: 30px 10px 30px 10px;
+  border-radius: 50%;
 }
 .profile-photo {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1;
   object-fit: cover;
-  object-position: 50% 35%;
-  border-radius: 30px 10px 30px 10px;
+  object-position: 50% 28%;
+  border-radius: 50%;
   box-shadow: var(--shadow);
   filter: saturate(.88) contrast(1.03);
 }
 .profile-note {
-  position: absolute;
-  right: -14px;
-  bottom: 24px;
-  padding: 10px 14px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: var(--surface);
-  color: var(--muted);
-  font-size: .78rem;
-  font-weight: 700;
-  box-shadow: var(--shadow);
+  display: none;
 }
 
 .section { padding: 94px 0; }
@@ -301,7 +291,7 @@ footer { width: min(var(--max), calc(100% - 40px)); margin: auto; padding: 34px 
   .site-nav a { padding: 8px; }
   .nav-tools { display: flex; gap: 8px; }
   .hero { grid-template-columns: 1fr; min-height: auto; padding: 64px 0 74px; }
-  .profile-frame { grid-row: 1; width: min(78vw, 350px); margin: 0 auto; }
+  .profile-frame { grid-row: 1; width: min(58vw, 240px); margin: 0 auto; }
   h1 { font-size: clamp(3.2rem, 15vw, 5rem); }
   .section-head, .about-grid { grid-template-columns: 1fr; gap: 20px; }
   .research-grid { grid-template-columns: 1fr; }
