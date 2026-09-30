@@ -311,6 +311,7 @@ h1 {
 .news-column { scroll-margin-top: 100px; }
 .news-list { border-top: 1px solid var(--line); }
 .news-item { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: 18px; padding: 17px 0; border-bottom: 1px solid var(--line); }
+.news-item[hidden] { display: none; }
 .news-date { color: var(--muted); font-size: .86rem; font-weight: 650; }
 .news-item p { margin: 0; line-height: 1.62; }
 .news-toggle {
