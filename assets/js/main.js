@@ -65,3 +65,18 @@ const observer = new IntersectionObserver((entries) => {
 revealItems.forEach((item) => observer.observe(item));
 
 document.querySelector('[data-year]').textContent = new Date().getFullYear();
+
+const visitorCount = document.querySelector('[data-visitor-count]');
+if (visitorCount) {
+  fetch('https://shuguosun.goatcounter.com/counter/TOTAL.json')
+    .then((response) => {
+      if (!response.ok) throw new Error('Visitor count unavailable');
+      return response.json();
+    })
+    .then((data) => {
+      if (data.count) visitorCount.textContent = data.count;
+    })
+    .catch(() => {
+      visitorCount.closest('.visitor-counter')?.setAttribute('title', 'Visitor count is temporarily unavailable');
+    });
+}
