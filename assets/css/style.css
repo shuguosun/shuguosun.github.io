@@ -313,6 +313,20 @@ h1 {
 .news-item { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: 18px; padding: 17px 0; border-bottom: 1px solid var(--line); }
 .news-date { color: var(--muted); font-size: .86rem; font-weight: 650; }
 .news-item p { margin: 0; line-height: 1.62; }
+.news-toggle {
+  margin-top: 20px;
+  padding: 0;
+  border: 0;
+  color: var(--text);
+  background: transparent;
+  font: inherit;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--text), transparent 45%);
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+.news-toggle:hover { color: var(--blue); }
+.news-toggle:focus-visible { outline: 2px solid var(--cyan); outline-offset: 5px; border-radius: 2px; }
 .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 70px; }
 .about-grid p { color: var(--muted); }
 .education { margin: 0; padding: 0; list-style: none; }

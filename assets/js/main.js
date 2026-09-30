@@ -28,6 +28,31 @@ document.querySelectorAll('[data-nav] a').forEach((link) => {
   });
 });
 
+const newsList = document.querySelector('[data-news-list]');
+const newsToggle = document.querySelector('[data-news-toggle]');
+const newsItems = newsList ? Array.from(newsList.querySelectorAll('.news-item')) : [];
+const visibleNewsCount = 4;
+
+function setNewsExpanded(expanded) {
+  newsItems.forEach((item, index) => {
+    item.hidden = !expanded && index >= visibleNewsCount;
+  });
+
+  if (newsToggle) {
+    const remaining = Math.max(newsItems.length - visibleNewsCount, 0);
+    newsToggle.hidden = remaining === 0;
+    newsToggle.setAttribute('aria-expanded', String(expanded));
+    newsToggle.textContent = expanded ? 'Show less' : `Show ${remaining} more`;
+  }
+}
+
+if (newsItems.length > visibleNewsCount) {
+  setNewsExpanded(false);
+  newsToggle?.addEventListener('click', () => {
+    setNewsExpanded(newsToggle.getAttribute('aria-expanded') !== 'true');
+  });
+}
+
 const revealItems = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {

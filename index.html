@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260929-publications">
-  <script defer src="assets/js/main.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=20260930-news4">
+  <script defer src="assets/js/main.js?v=20260930-news4"></script>
 </head>
 <body>
   <header class="site-header">
@@ -72,7 +72,7 @@
         </div>
         <div class="news-column reveal" id="news">
           <h2 class="column-title">News</h2>
-          <div class="news-list">
+          <div class="news-list" data-news-list>
             <article class="news-item"><div class="news-date">Sep 2026</div><p>I gave a talk at ASME DRIVN 2026 in Southfield, Michigan, on the multiphysics mechanism of internal short circuits in batteries.</p></article>
             <article class="news-item"><div class="news-date">May 2026</div><p>I presented two talks at the 249th ECS Meeting in Seattle on physics-informed prediction of full-life-cycle thermal runaway and the mechanisms of mechanically induced internal short circuits.</p></article>
             <article class="news-item"><div class="news-date">May 2026</div><p>I received the Best Presentation Award and the K. M. Abraham Travel Award at the 249th ECS Meeting.</p></article>
@@ -82,6 +82,7 @@
             <article class="news-item"><div class="news-date">May 2025</div><p>I presented my work on aging path dependency in lithium-ion battery thermal hazards at the 2025 FM Fire Modeling Workshop in Norwood, Massachusetts.</p></article>
             <article class="news-item"><div class="news-date">Mar 2025</div><p>I gave a talk on aging path dependency in lithium-ion battery thermal hazards at the 14th U.S. National Congress on Computational Mechanics in Boston.</p></article>
           </div>
+          <button class="news-toggle" type="button" data-news-toggle aria-expanded="false" hidden>Show more</button>
         </div>
       </div>
     </section>
