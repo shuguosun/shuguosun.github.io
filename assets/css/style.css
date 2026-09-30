@@ -151,6 +151,12 @@ h1 {
 }
 .hero-role strong { color: var(--text); font-weight: 700; }
 .hero-copy { max-width: 670px; margin: 0 0 34px; color: var(--muted); }
+.hero-profile-link {
+  color: inherit;
+  text-decoration-color: color-mix(in srgb, currentColor, transparent 58%);
+  text-underline-offset: 4px;
+}
+.hero-profile-link:hover { color: var(--blue); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .button {
   display: inline-flex;
